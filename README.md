@@ -1,38 +1,51 @@
-Role Name
+Ansible Role: Node 10
 =========
 
-A brief description of the role goes here.
+Ansible role to install Node version 10 on RHEL/CentOS
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+None.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+From the default/main.yml
+```
+__node_modules_path: /srv/WebSite/node_modules
+```
+The following variable is required and passed into the playbook:
+```$xslt
+node_server_role_version
+```
+The directoruy location for the node_modules folder(s)
+```
+node_modules_dirs
+```
+Node version is passed into the role and playbook from user entery 
+```$xslt
+node_version
+```
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: jhd3.ansible_role_node10 }
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Create in 2019 by James Dugger for Cyberitas Technologies, LLC
