@@ -1,0 +1,26 @@
+# Requires node_version variable set in parent
+---
+- include_tasks: "setup-{{ ansible_os_family }}.yml"
+
+- name: Set node modules paths
+  set_fact:
+    node_modules_dirs: "{{ __node_modules_dirs }}"
+
+- name: Create gulp directories
+  file:
+    path: "{{ item.source }}"
+    state: directory
+    owner: "vagrant"
+    group: "vagrant"
+    mode: '0775'
+  loop: "{{ node_modules_dirs }}"
+
+
+- name: Create symlinks to Gulp node_modules directories.
+  file:
+    src: "{{ item.source }}"
+    dest: "{{ item.symlink }}"
+    owner: vagrant
+    group: vagrant
+    state: link
+  loop: "{{ node_modules_dirs }}"
