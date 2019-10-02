@@ -11,12 +11,8 @@ None.
 Role Variables
 --------------
 
-From the default/main.yml
-```
-__node_modules_path: /srv/WebSite/node_modules
-```
 The following variable is required and passed into the playbook:
-```$xslt
+```
 node_server_role_version
 ```
 The directoruy location for the node_modules folder(s)
@@ -24,7 +20,7 @@ The directoruy location for the node_modules folder(s)
 node_modules_dirs
 ```
 Node version is passed into the role and playbook from user entery 
-```$xslt
+```
 node_version
 ```
 
