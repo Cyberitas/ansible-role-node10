@@ -2,6 +2,7 @@
 - name: Set version number
   set_fact:
     node_version: "{{ node_server_role_version }}"
+
 - name: Check for nodesource repo
   stat:
     path: /etc/yum.repos.d/nodesource-el7.repo
