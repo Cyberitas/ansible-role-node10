@@ -11,16 +11,10 @@ None.
 Role Variables
 --------------
 
-The following variable is required and passed into the playbook:
-```
-node_server_role_version
-```
-The directoruy location for the node_modules folder(s)
+The following variables must be set with values in the host_vars or group_vars:
 ```
 node_modules_dirs
-```
-Node version is passed into the role and playbook from user entery 
-```
+node_server_role_version
 node_version
 ```
 
