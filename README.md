@@ -11,7 +11,7 @@ None.
 Role Variables
 --------------
 
-The following variables must be set with values in the host_vars or group_vars:
+The following variables must be set with values in a .yml file in either host_vars or group_vars:
 ```
 node_modules_dirs
 node_server_role_version
@@ -28,7 +28,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: jhd3.ansible_role_node10 }
+         - { role: cyberitas.ansible_role_node10 }
 
 License
 -------
