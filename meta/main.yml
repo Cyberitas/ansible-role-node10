@@ -1,5 +1,6 @@
 galaxy_info:
   author: James Dugger
+  role_name: node10
   description: Ansible role to install node 10 on Linux
   company: Cyberitas Technologies, LLC
   license: license (MIT)
